@@ -1,0 +1,25 @@
+
+
+
+
+<div>
+    <nav id="indexBar" class="navbar navbar-expand-sm navbar-dark">
+      <ul class=" navbar-nav farsialignment" style="margin: 0px auto;">
+        {%for sec in sections %}
+        <li class="nav-item">
+          <a id="navlinkcolor" class="nav-link" href=#{{ sec.title }}>
+              <span class="english">{{ sec.title }}</span>
+              <span class="farsi">{{ sec.farsi_title }}</span>
+            </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {%for sec in sections %}
+    <div id="section1" class="container" style="padding-top:70px;padding-bottom:70px">
+      <h1 class="english">{{sec.title}}</h1>
+      <h1 class="farsi">{{sec.farsi_title}}</h1>
+      <p class="english">{{sec.description}}</p>
+      <p class="farsi">{{sec.farsi_description}}</p>
+    </div>
+  </div>

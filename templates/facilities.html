@@ -1,0 +1,239 @@
+<!DOCTYPE html>  
+<html lang="fa">
+  {% load static %}
+
+  <head>
+    <meta charset="utf-8">
+    <title>Facilities | امکانات</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bs/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/MasterFinal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/neededtelegram.css' %}">
+    <script src="{% static 'js/bs/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bs/popper.min.js' %}"></script>
+    <script src="{% static 'js/bs/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/getCheckCookie.js' %}"></script>
+  </head>
+  
+  <body onload="checkCookie()">
+      <button onclick="topFunction()" class="farsialignment" id="goToTopBtn" title="Go to top">
+          <span class="english"> UP</span>
+          <span class="farsi"> بالا</span>
+          <img src="{% static 'img/chevron-top.svg' %}" alt="" width="15px">
+        </button>
+        <!--Fixed top navbar-->
+        <nav class="sticky-top farsialignment navbar navbar-expand-lg navbar-orgcolor bg-orgcolor">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navContent navbar-collapse" style="flex-grow:0 !important;-webkit-flex-grow: 0 !important;">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href={% url 'Home' %}><img src="{% static 'img/webicon/Blue Outline Version/home-W.png' %}" alt="home page" width="40px"></a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="{% static 'img/webicon/Blue Outline Version/about-W.png' %}" alt="" width="30px"><span class="english">About</span><span class="farsi">درباره ما</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href={% url 'vision' %}>
+                      <span class="english">Vision</span>
+                      <span class="farsi">اهداف</span>
+                    </a>
+                    <a class="dropdown-item" href={% url 'achievements' %}>
+                      <span class="english">Achievements</span>
+                      <span class="farsi">دستاورد ها</span>
+                    </a>
+                    <a class="dropdown-item" href={% url 'facilities' %}>
+                      <span class="english">Facilities</span>
+                      <span class="farsi">امکانات</span>
+                    </a>
+                    <a class="dropdown-item" href={% url 'staff' %}>
+                      <span class="english">Staff</span>
+                      <span class="farsi">همکاران</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'news:All' %}>
+                    <img src="{% static 'img/webicon/Blue Outline Version/news-W.png' %}" alt="" width="30px">
+                    <span class="english">News</span>
+                    <span class="farsi">اخبار</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'galleries:All' %}>
+                    <img src="{% static 'img/webicon/Blue Outline Version/gallery-W.png' %}" alt="" width="30px">
+                    <span class="english">Gallery</span>
+                    <span class="farsi">گالری</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'registration' %}>
+                    <img src="{% static 'img/webicon/Blue Outline Version/Rprogram-W.png' %}" alt="" width="30px">
+                    <span class="english">Registration</span>
+                    <span class="farsi">ثبت نام</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'contactUs' %}>
+                    <img src="{% static 'img/webicon/Blue Outline Version/iphone-W.png' %}" alt="" width="30px">
+                    <span class="english">Contact Us</span>
+                    <span class="farsi">تماس با ما</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'onlineLearning' %}>
+                    <img src="{% static 'img/webicon/Blue Outline Version/Onlinelearning-W.png' %}" alt="" width="30px">
+                    <span class="english">Online Learning</span>
+                    <span class="farsi">آموزش از راه دور</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a id="loginbuttonnobodypage" class="nav-link" href="http://lms-javid.ir/login/index.php">
+                  <button id="loginbutton"type="button" class="btn btn-outline-white" onmouseover="imghover(myimg);" onmouseout="imgunhover(myimg);">
+                    <div class="navbar-link">
+                      <img id="myimg" src="{% static 'img/webicon/Blue Outline Version/Lock.png' %}" alt="" width="30px">
+                      <span class="english"> E-learning Section</span>
+                      <span class="farsi">بخش آموزش</span>
+                    </div>
+                  </button>
+              </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    <header>
+    <!--banner & logo and Page title-->
+    <div style="align-items: center; position: relative">
+      <div id="DiscOverImg">
+        <h1 class="english">Facilities</h1>
+        <h1 class="farsi" style="text-align: center !important">امکانات</h1>
+        <p class="english"></p>
+        <p class="farsi" style="text-align: center !important"></p>
+      </div>
+      <img id="fitImg" src={{ cover.cover.url }} alt="BannerImage">
+      <div id="logoOverlap">
+        <img class="imglogo" src="{% static 'img/JPPS Logo HQ.png' %}" alt="Logo Image">
+      </div>
+  </header>
+
+  <div class="container maincommenbody">
+    <div class="visiontitle">
+      <h2 class="english" style="text-align:center">{{content.title}}</h2>
+      <h2 class="farsi" style="text-align:center">{{content.farsi_title}}</h2>
+      <h3 class="english" style="text-align:center"></h3>
+      <h3 class="farsi" style="text-align:center"></h3>
+    </div>
+    <div class="visionbody">
+      <div class="english">
+        {{content.description|safe}}
+      </div>
+      <div class="farsi">
+        {{content.farsi_description|safe}}
+      </div>
+    </div>
+  </div>
+
+
+  <footer id="footerAttr">
+    <div class="container-fluid row">
+      <!--Footer 1st colomn-->
+      <div class="container col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <h3 class="english">Find us here!</h3>
+        <h3 class="farsi" style="text-align:center">ما را اینجا پیدا کنید!</h3>
+        <div id="map"></div>
+        <div class="english" style="text-align:Left;width:300px;margin-right:auto;margin-left:auto">
+          <b>Address:</b> NJLDLC, Derakhshani St, Ashrafi Esfahani Expy, Tehran, Iran.
+        </div>
+        <div class="farsi" style="text-align:right;width:300px;margin-right:auto;margin-left:auto">
+          <b>آدرس: </b>تهران، بزرگراه اشرفی اصفهانی، کوچه درخشانی، دبستان غیر دولتی جاوید
+        </div>
+        <script>
+          function initMap() {
+            var mapboarder = {
+              lat: 35.744124,
+              lng: 51.336588
+            };
+            var markerr = {
+              lat: 35.744255,
+              lng: 51.334723
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 16,
+              center: markerr
+            });
+            var marker = new google.maps.Marker({
+              position: mapboarder,
+              map: map
+            });
+          }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPodOx_4C8n3TrzngrizGFUAm--Dgav7o&callback=initMap">
+        </script>
+      </div>
+      <!--Footer 2nd colomn-->
+      <div class="container col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        
+        <h3 class="english">Message us here!</h3>
+        <h3 class="farsi" style="text-align:center">اینجا به ما پیام دهید!</h3>
+        <!-- TELEGRAM PART-->
+        <div class="telegramDiv">
+          <div class="tgme_page">
+            <div class="tgme_page_photo">
+                <a href="tg://resolve?domain=javid_25">
+                    <img class="tgme_page_photo_image" src="{% static 'img\javid_telegram.jpg' %}"></a>
+              </a>
+              
+            </div>
+            <div class="tgme_page_title">Javid School</div>
+            <div class="tgme_page_extra">
+              @javid_25
+            </div>
+            <div class="tgme_page_description">پیش دبستان ودبستان پسرانه غیردولتی جاوید- منطقه 2 تهران - تأسیس 1370</div>
+            <div class="tgme_page_action">
+              <a class="tgme_action_button_new" href="tg://resolve?domain=javid_25">Send Message</a>
+            </div>
+            <!-- WEBOGRAM_BTN -->
+            <div class="tgme_page_additional">
+              If you have
+              <strong>Telegram</strong>, you can contact
+              <br>
+              <strong>Javid</strong> right away.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Footer 3rd colomn-->
+      <div class="container col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        
+        <h3 class="farsi" style="text-align:center">!Change the Language Here</h3>
+        <h3 class="english" style="text-align:center">!اینجا زبان را تغییر دهید</h3>
+        <div class="btn-group" style="margin-top:8px;">
+          
+          <button type="button" class="btn btn-outline-white dropdown-toggle" data-toggle="dropdown">
+            <span class="english">Site Language</span>
+            <span class="farsi">زبان سایت</span>
+          </button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item" onclick="changelang2fa()">
+                <img style="width:20px"src="{% static 'img/ir.svg' %}" alt="ir-icon"> فارسی</button>
+            <button class="dropdown-item" onclick="changelang2en()">
+                <img style="width:20px"src="{% static 'img/gb.svg' %}" alt="ir-icon"> English</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--copyright-->
+  <div id="copyright">
+    
+    | Designed & Developed by
+    <a href="https://www.linkedin.com/in/imananoosheh/">Iman Anoosheh</a> &
+    <a href="https://www.linkedin.com/in/ali-yazdanpanah-5a7b10146">Ali Yazdanpanah</a> © 2018 | All rights reserved. |
+  </div>
+
+  <script type="text/javascript" src="{% static 'js/masterfinal.js' %}"></script>
+</body>
+
+</html>

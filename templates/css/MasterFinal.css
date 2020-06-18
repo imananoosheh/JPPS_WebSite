@@ -1,0 +1,553 @@
+/*multilanguage, font, footer, copyright css included*/
+
+/*for Language switching and required aligments*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900|Share+Tech+Mono&subset=arabic');
+.english {
+  display: none !important;
+}
+
+.farsi {
+  display: none !important;
+  direction: rtl;
+  font-family: 'IRANSans';
+  text-align: right;
+}
+
+.english:lang(en), .farsi:lang(fa) {
+  display: block !important;
+}
+
+span.english:lang(en) {
+  display: inline !important;
+}
+
+span.farsi:lang(fa) {
+  display: inline !important;
+}
+
+.farsialignment:lang(fa) {
+  direction: rtl;
+  text-align: right;
+}
+
+/*footer attributes*/
+
+#footerAttr {
+  color: rgba(256, 256, 256, 0.95);
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#footerAttr>div>div {
+  margin: 20px 0px;
+}
+
+#map {
+  height: 350px;
+  width: 300px;
+  background-color: grey;
+  margin: 5px auto;
+}
+
+/*copyright*/
+
+#copyright>a {
+  color: #000;
+  text-decoration: underline;
+}
+
+#copyright {
+  background-color: inherit;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+/**
+*
+*	Name:			IRAN Sans-Serif Font
+*	Version:		5.0
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		Dec 25, 2012
+*	Updated on:		Sep 01, 2017
+*	Website:		             http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت های ایران سن سریف یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+IRAN Sans-serif fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+--------------------------------------------------------------------------------------
+*
+**/
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/eot/IRANSansWeb_Black.eot');
+  src: url('../fonts/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff2/IRANSansWeb_Black.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/woff/IRANSansWeb_Black.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/ttf/IRANSansWeb_Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/eot/IRANSansWeb_Bold.eot');
+  src: url('../fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/woff/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/eot/IRANSansWeb_Medium.eot');
+  src: url('../fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/woff/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/eot/IRANSansWeb_Light.eot');
+  src: url('../fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff2/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/woff/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/eot/IRANSansWeb_UltraLight.eot');
+  src: url('../fonts/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/eot/IRANSansWeb.eot');
+  src: url('../fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/woff2/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+/*Telegram Section*/
+
+.telegramDiv {
+  height: 400px !important;
+  top: 4%;
+  position: relative;
+  /*overflow-y: auto;
+  margin: auto;*/
+}
+
+
+#DiscOverImg {
+  position: absolute;
+  right: 20%;
+  bottom: 20px;
+  left: 20%;
+  z-index: 5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(256, 256, 256, 0.3);
+  color: rgba(0, 0, 0, 0.85);
+  text-align: center;
+  border-radius: 10px;
+}
+
+#logoOverlap {
+  top: 10px;
+  position: absolute;
+  left: 10px;
+  z-index: 0;
+}
+
+#fitImg {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.zoomHover {
+  transition: transform .3s; /* Animation */
+  display: block;
+}
+
+.zoomHover:hover {
+  transform: scale(1.02);
+}
+
+.imglogo {
+  width: 150px;
+  height: auto;
+  background-color: rgba(256, 256, 256, 0.3);
+  border-radius: 10px;
+}
+
+.maincommenbody {
+  /*should come with container not container-fluid*/
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 10px;
+  width: auto;
+  padding: 15px;
+  margin: 20px auto;
+  color: rgba(0, 0, 0, .9);
+}
+
+.navContent>div>ul {
+  display: inline-flex !important;
+}
+
+.navContent>div>ul>li {
+  margin: auto 5px;
+}
+
+#footerAttr > .row {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width:575px) {
+  .articlesignature img {
+    width: 20px;
+  }
+}
+
+@media (min-width:576px) {
+  .navContent:lang(en) {
+    direction: ltr;
+    font-family: 'Lato', sans-serif;
+    float: none;
+    text-align: left;
+  }
+  .navContent:lang(fa) {
+    direction: rtl;
+    font-family: 'IRANSans';
+    float: right;
+    text-align: right;
+  }
+  .articlesignature img {
+    width: 20px;
+  }
+}
+
+@media (min-width:768px) {
+  .navContent:lang(en) {
+    direction: ltr;
+    font-family: 'Lato', sans-serif;
+    float: none;
+    text-align: left;
+  }
+  .navContent:lang(fa) {
+    direction: rtl;
+    font-family: 'IRANSans';
+    float: right;
+    text-align: right;
+  }
+  #footerAttr .container:first-child {
+    border-right: 2px solid rgba(256, 256, 256, 1);
+  }
+  .articlesignature img {
+    width: 30px;
+  }
+}
+
+@media (min-width:992px) {
+  .navContent {
+    float: none;
+    text-align: center;
+    margin: auto;
+    width: auto;
+  }
+  .navContent:lang(en) {
+    direction: ltr;
+    font-family: 'Lato', sans-serif;
+  }
+  .navContent:lang(fa) {
+    direction: rtl;
+    font-family: 'IRANSans';
+  }
+  .headerItem > li > a {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .headerItem a {
+    font-size: .8rem !important;
+  }
+  #footerAttr .container:first-child {
+    border-right: 2px solid rgba(256, 256, 256, 1);
+  }
+  #footerAttr .container:nth-child(2) {
+    border-right: 2px solid rgba(256, 256, 256, 1);
+  }
+}
+
+@media (min-width:1200px) {
+  .navContent {
+    float: none;
+    text-align: center;
+    margin: auto;
+    width: auto;
+  }
+  .navContent:lang(en) {
+    direction: ltr;
+    font-family: 'Lato', sans-serif;
+  }
+  .navContent:lang(fa) {
+    direction: rtl;
+    font-family: 'IRANSans';
+  }
+  .headerItem > li > a {
+    padding-left: .5rem !important;
+    padding-right: .5rem !important;
+  }
+  .headerItem a {
+    font-size: 1rem !important;
+  }
+  #footerAttr .container:first-child {
+    border-right: 2px solid rgba(256, 256, 256, 1);
+  }
+  #footerAttr .container:nth-child(2) {
+    border-right: 2px solid rgba(256, 256, 256, 1);
+  }
+  .articlesignature img {
+    width: 40px;
+  }
+}
+
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid rgba(256, 256, 256, 1);
+  outline: none;
+  color: rgba(256, 256, 256, .8);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#goToTopBtn img {
+  filter: invert(100%);
+}
+
+#contactusbody img {
+  width: 30px;
+  margin: 0px 10px;
+}
+
+#contactusbody {
+  margin: 50px 10px;
+}
+
+#contactusbody a {
+  color: #000;
+  text-decoration: none;
+  margin: 5px 0px;
+}
+
+#contactusbody a:hover {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0px;
+}
+
+#indexBar {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19), 0 -2px 8px 0 rgba(0, 0, 0, 0.2), 0 -3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.textwarp, .textwarp > div, .textwarp > div > div {
+  word-wrap: break-word !important;
+}
+
+/* All changable colors*/
+
+body {
+  background-color: rgba(45, 198, 158, .6) !important;
+}
+
+.maincommenbody {
+  border-color: rgba(10, 142, 160, .9) !important;
+}
+
+#footerAttr {
+  background-color: rgba(10, 142, 160, 1) !important;
+}
+
+#headerOnSlideBorder {
+  border-color: rgba(10, 142, 160, .9) !important;
+}
+
+#DiscriptionOverImg>span {
+  border-color: rgba(10, 142, 160, .9) !important;
+}
+
+.centralNewsBoarder {
+  border-color: rgba(10, 142, 160, .9) !important;
+}
+
+.newsCenterCaptoion {
+  border-color: rgba(10, 142, 160, .9) !important;
+}
+
+#indexBar {
+  background-color: rgba(10, 142, 160, 1) !important;
+}
+
+.linkedWebsiteBorder {
+  border-color: rgba(10, 142, 160, .9) !important;
+}
+
+.linkedWebsiteHeaderBorder {
+  border-color: rgba(10, 142, 160, .9) !important;
+}
+
+#goToTopBtn {
+  background-color: rgba(48, 195, 158, .9);
+}
+
+#goToTopBtn:hover {
+  color: rgba(256, 256, 256, 1);
+}
+
+.staffSectionHeaderBorder {
+  border-color: rgba(10, 142, 160, .9) !important;
+}
+
+/*                customized bootstrap code by ImanA*/
+
+.dropdown-menu {
+  background-color: rgba(10, 142, 160, 1) !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(48, 195, 158, 1) !important;
+  color: rgba(256, 256, 256, .9) !important;
+  border-radius: 0.25rem;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(12, 150, 182, 1) !important;
+}
+
+.btn-outline-white:hover {
+  color: rgba(256, 256, 256, 1) !important;
+  background-color: rgba(48, 195, 158, 1) !important;
+}
+
+.bg-orgcolor {
+  background-color: rgba(10, 142, 160, 1) !important;
+}
+
+a.bg-orgcolor:focus, a.bg-orgcolor:hover, button.bg-orgcolor:focus, button.bg-orgcolor:hover {
+  background-color: rgba(12, 150, 182, 1) !important;
+}
+
+.navbar-orgcolor .navbar-brand {
+  color: rgba(256, 256, 256, .9)
+}
+
+.navbar-orgcolor .navbar-brand:focus, .navbar-orgcolor .navbar-brand:hover {
+  color: rgba(256, 256, 256)
+}
+
+.navbar-orgcolor .navbar-nav .nav-link {
+  color: rgba(256, 256, 256, .9)
+}
+
+.navbar-orgcolor .navbar-nav .nav-link:focus, .navbar-orgcolor .navbar-nav .nav-link:hover {
+  color: rgba(256, 256, 256, 1)
+}
+
+.navbar-orgcolor .navbar-nav .nav-link.disabled {
+  color: rgba(256, 256, 256, .3)
+}
+
+.navbar-orgcolor .navbar-nav .active>.nav-link, .navbar-orgcolor .navbar-nav .nav-link.active, .navbar-orgcolor .navbar-nav .nav-link.show, .navbar-orgcolor .navbar-nav .show>.nav-link {
+  color: rgba(256, 256, 256, 1)
+}
+
+.navbar-orgcolor .navbar-toggler {
+  color: rgba(256, 256, 256, .5);
+  border-color: rgba(256, 256, 256, .5)
+}
+
+.navbar-orgcolor .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256, 256, 256, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+
+.navbar-orgcolor .navbar-text {
+  color: rgba(0, 0, 0, .5)
+}
+
+.navbar-orgcolor .navbar-text a {
+  color: rgba(0, 0, 0, .9)
+}
+
+.navbar-orgcolor .navbar-text a:focus, .navbar-orgcolor .navbar-text a:hover {
+  color: rgba(0, 0, 0, .9)
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: rgba(10, 142, 160, 1);
+}
+
+.nav-pills li a {
+  color: #000;
+}
+
+.btn-outline-orgcolor {
+  color: rgba(10, 142, 160, 1);
+  background-color: transparent;
+  background-image: none;
+  border-color: rgba(10, 142, 160, 1);
+}
+
+.btn-outline-orgcolor:hover {
+  color: #fff;
+  background-color: rgba(10, 142, 160, 1);
+  border-color: rgba(10, 142, 160, 1);
+}
+
+.btn-outline-orgcolor.focus, .btn-outline-orgcolor:focus {
+  box-shadow: 0 0 0 .2rem rgba(10, 142, 160, .5);
+}
+
+.btn-outline-orgcolor.disabled, .btn-outline-orgcolor:disabled {
+  color: rgba(10, 142, 160, 1);
+  background-color: transparent
+}
+
+.btn-outline-orgcolor:not([disabled]):not(.disabled).active, .btn-outline-orgcolor:not([disabled]):not(.disabled):active, .show>.btn-outline-orgcolor.dropdown-toggle {
+  color: #212529;
+  background-color: rgba(10, 142, 160, 1);
+  border-color: rgba(10, 142, 160, 1);
+  box-shadow: 0 0 0 .2rem rgba(10, 142, 160, .5);
+}

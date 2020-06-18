@@ -1,0 +1,125 @@
+a>h1, h2, h3, h4, h5, h6, p, div a>h1, h2, h3, h4, h5, h6, p, div :hover {
+  text-decoration: none;
+}
+
+.centralNewsBoarder {
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 10px;
+  width: auto;
+  padding: 15px 15px;
+}
+
+div.centralNewsBoarder>ul, div.centralNewsBoarder>div {
+  width: auto;
+}
+
+.newsThumbnail {
+  text-align: center;
+}
+
+div.newsThumbnail>img {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+}
+
+.newsContent {
+  max-height: 150px;
+  color: #000;
+}
+
+div.newsContent>p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 100%;
+  max-height: 100px;
+  /* Fallback for non-webkit */
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.catHeader {
+  padding-left: 20px;
+  padding-right: 50px;
+  color: #000;
+}
+
+.newsCenterCaptoion {
+  text-align: center !important;
+  margin: 10px auto !important;
+  width: 95%;
+  padding-bottom: 15px;
+  border-bottom: 2px solid;
+  color: #000;
+}
+
+.newsPagination {
+  margin-top: 30px;
+}
+
+.zoomEachNews {
+  transition: transform .3s; /* Animation */
+  display: block;
+}
+
+.zoomEachNews:hover {
+  transform: scale(1.02);
+}
+
+/*      customized bootstrap by ImanA*/
+
+.page-item:first-child .page-link:lang(en) {
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+.page-item:first-child .page-link:lang(fa) {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+
+.page-item:last-child .page-link:lang(en) {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+
+.page-item:last-child .page-link:lang(fa) {
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+.page-link {
+  color: rgba(256, 256, 256, .9);
+  background-color: transparent;
+  border: 1px solid;
+  border-color: transparent;
+}
+
+.page-link:focus, .page-link:hover {
+  color: rgba(256, 256, 256, 1);
+  background-color: transparent;
+  /*border-color: #dee2e6*/
+}
+.page-item.active .page-link {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(10, 142, 160, 1);
+  border-color: rgba(10, 142, 160, 1);
+}
+
+.page-item.disabled .page-link {
+  color: #868e96;
+  background-color: transparent;
+  border-color: transparent;
+}

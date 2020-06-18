@@ -1,0 +1,27 @@
+.achBorder {
+  box-sizing: border-box;
+  border: 2px solid rgba(3, 126, 243, .9);
+  border-radius: 10px;
+  color: #fff;
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.achBorder > img {
+  width: 100%;
+  padding : auto;
+}
+
+.card {
+  max-width: 325px;
+  margin: auto;
+}
+
+.row > div {
+  margin: 10px auto;
+}
+
+.card-body{
+  text-align: center;
+}

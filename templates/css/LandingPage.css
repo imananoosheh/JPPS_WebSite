@@ -1,0 +1,363 @@
+body {
+  position: relative;
+  background-color: rgba(3, 126, 243, .6);
+}
+
+#demo {
+  display: block;
+  opacity: 0.9;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  max-width: none;
+}
+
+#headerOnSlideBorder {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid;
+  border-radius: 10px;
+  color: white;
+  top: 15px;
+  width: 96%;
+  right: 2%;
+  z-index: 1;
+}
+
+#headerOnSlideBorder > li {
+  margin: auto;
+}
+
+.nav-item {
+  margin: auto 5px;
+}
+
+.linkedWebsite {
+  width: 95%;
+  right: 2.5%;
+  left: 2.5%;
+}
+
+.linkedWebsiteBorder {
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 10px;
+  width: auto;
+  padding: 15px 15px;
+}
+.linkedWebsiteHeaderBorder {
+  text-align: center !important;
+  margin: 10px auto !important;
+  width: 95%;
+  padding-bottom: 15px;
+  border-bottom: 2px solid;
+}
+
+@media (max-width:576px) {
+  /*.headerItem a {
+    font-size: 0.6rem !important;
+    font-weight: 400 !important;
+  }*/
+  .headerItem img {
+    width: 25px !important;
+  }
+  #logoimg {
+    height: 85px;
+  }
+  .headerItem>li>a {
+    padding-top: .2rem !important;
+    padding-bottom: .2rem !important;
+  }
+  #DiscriptionOverImg span {
+    font-size: 1rem;
+    line-height: 1 !important;
+    vertical-align: top !important;
+  }
+  #headerOnSlideBorder {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .linkedWebsite img {
+    width: 80px;
+  }
+}
+
+@media (min-width:576px) {
+  /*.headerItem a {
+    font-size: 0.6rem !important;
+    font-weight: 400 !important;
+  }*/
+  .headerItem img {
+    width: 25px !important;
+  }
+  #logoimg {
+    height: 85px;
+  }
+  .headerItem>li>a {
+    padding-top: .2rem !important;
+    padding-bottom: .2rem !important;
+  }
+  #DiscriptionOverImg span {
+    font-size: 1rem;
+    line-height: 1 !important;
+  }
+  #headerOnSlideBorder {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .navContent:lang(en) {
+    direction: ltr;
+    font-family: 'Lato', sans-serif;
+    float: none;
+    text-align: left;
+  }
+  .navContent:lang(fa) {
+    direction: rtl;
+    font-family: 'Lalezar';
+    float: right;
+    text-align: right;
+  }
+  .linkedWebsite img {
+    width: 90px;
+  }
+}
+
+@media (min-width:768px) {
+  /*.headerItem a {
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+  }*/
+  .headerItem img {
+    width: 30px !important;
+  }
+  .headerItem>li>a {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+  }
+  #logoimg {
+    height: 70px;
+  }
+  #DiscriptionOverImg span {
+    font-size: 2rem;
+    line-height: 1.1 !important;
+  }
+  #headerOnSlideBorder {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .navContent:lang(en) {
+    direction: ltr;
+    font-family: 'Lato', sans-serif;
+    float: none;
+    text-align: left;
+  }
+  .navContent:lang(fa) {
+    direction: rtl;
+    font-family: 'Lalezar';
+    float: right;
+    text-align: right;
+  }
+  .linkedWebsite img {
+    width: 100px;
+  }
+}
+
+@media (min-width:992px) {
+  /*.headerItem a {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+  }*/
+  .headerItem img {
+    width: 35px !important;
+  }
+  .headerItem>li>a {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    padding-right: .2rem !important;
+    padding-left: .2rem !important;
+  }
+  #logoimg {
+    height: 80px;
+  }
+  #DiscriptionOverImg span {
+    font-size: 3rem;
+    line-height: 1.2 !important;
+  }
+  #headerOnSlideBorder {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .navContent {
+    float: none;
+    text-align: center;
+    margin: auto;
+    width: auto;
+  }
+  .navContent:lang(en) {
+    direction: ltr;
+    font-family: 'Lato', sans-serif;
+  }
+  .navContent:lang(fa) {
+    direction: rtl;
+    font-family: 'Lalezar';
+  }
+  .linkedWebsite img {
+    width: 120px;
+  }
+}
+
+@media (min-width:1200px) {
+  /*.headerItem a {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+  }*/
+  .headerItem img {
+    width: 40px !important;
+  }
+  .headerItem>li>a {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+  }
+  #logoimg {
+    height: 100px;
+  }
+  #DiscriptionOverImg span {
+    font-size: 4rem;
+    line-height: 1.3 !important;
+  }
+  #headerOnSlideBorder {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .navContent {
+    float: none;
+    text-align: center;
+    margin: auto;
+    width: auto;
+  }
+  .navContent:lang(en) {
+    direction: ltr;
+    font-family: 'Lato', sans-serif;
+  }
+  .navContent:lang(fa) {
+    direction: rtl;
+    font-family: 'Lalezar';
+  }
+  .linkedWebsite img {
+    width: 150px;
+  }
+}
+
+.ulheader {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.liheader {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+#lockimg:hover {
+  content: url('img/webicon/PNG/Blue Outline Version/Lock.png');
+}
+
+#loginbuttonnobodypage {
+  padding: 0px;
+  width: 100%;
+}
+
+.mainbody {
+  position: static;
+}
+
+#scrollspymainpage {
+  position: sticky;
+}
+
+#middleBody {
+  position: static;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+#navlinkcolor {
+  color: rgba(256, 256, 256, .8);
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
+}
+
+#navlinkcolor:hover {
+  color: rgba(256, 256, 256, .95);
+}
+
+#navlinkcolor.active, #navlinkcolor.show {
+  color: #fff
+}
+
+#fitImg {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlap {
+  top: -10px;
+  position: relative;
+  left: 0px;
+  z-index: 1;
+}
+
+.imglogo {
+  width: 150px;
+  height: auto;
+  background-color: rgba(256, 256, 256, 0.3);
+}
+
+#logoOverlap {
+  top: 10px;
+  position: absolute;
+  left: 10px;
+  z-index: 0;
+}
+
+#DiscriptionOverImg {
+  position: absolute;
+  width: auto;
+  right: 15%;
+  bottom: 35%;
+  top: 44%;
+  left: 15%;
+  z-index: 5;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: rgba(256, 256, 256, 0.9);
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#DiscriptionOverImg span {
+  font-style: normal;
+  font-weight: bold;
+  display: table;
+  justify-content: center;
+  vertical-align: middle;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+.alwaystop {
+  height: 60px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #037ef3;
+  z-index: 11;
+}
+
+#indexBar {
+  position: sticky;
+  top: 0px;
+}

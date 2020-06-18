@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="fa">
+
+<head>
+  <meta charset="utf-8">
+  <title>Javid School | مدرسه جاوید</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bs/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/MasterFinal.css' %}">
+  <link rel="stylesheet" href="{% static 'css/newsCenter.css' %}">
+  <link rel="stylesheet" href="{% static 'css/LandingPage.css' %}">
+  <link rel="stylesheet" href="{% static 'css/neededtelegram.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}" />
+  <script src="{% static 'js/bs/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bs/popper.min.js' %}"></script>
+  <script src="{% static 'js/bs/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/getCheckCookie.js' %}"></script>
+</head>
+
+<body onload="checkCookie()" ontouchstart="">
+
+  <button onclick="topFunction()" class="farsialignment" id="goToTopBtn" title="Go to top">
+    <span class="english"> UP</span><span class="farsi"> بالا</span>
+    <img src="{% static 'img/chevron-top.svg' %}" alt="" width="15px">
+  </button>
+  <header>
+      <!--Video Carousel-->
+      <div id="demo" class="carousel slide videoSlideshow" data-ride="carousel" data-interval="5000" data-pause>
+  
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+        {% for vp in vidsPics %}
+          {% if forloop.counter == 1 %}
+              <div class="carousel-item active">
+                <video playsinline autoplay loop muted style="width:100%;height:100%;">
+                  <source src={{ vp.vOp.url }} type="video/mp4"> Your browser does not support the video tag.
+                  <source src={{ vp.vOpm.url }} type="video/mp4">
+                </video>
+              </div>  
+            {% else %}
+              <div class="carousel-item">
+                  <video playsinline autoplay loop muted style="width:100%;height:100%;">
+                    <source src={{ vp.vOp.url }} type="video/mp4"> Your browser does not support the video tag.
+                    <source src={{ vp.vOpm.url }} type="video/mp4">
+                  </video>
+              </div>
+          {% endif %}
+        {% endfor %}
+        </div>
+  
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+        <div id="DiscriptionOverImg">
+          <span class="english">Javid Private Primary School</span><span class="farsi">دبستان غیر دولتی جاوید</span>
+        </div>
+      </div>
+      <!-- navbar overlayered with videoSlideshow-->
+      <div id="headerOnSlideBorder">
+        <nav class="navbar navbar-expand-lg navbar-orgcolor bg-transparent">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="navContent navbar-collapse" style="flex-grow:0 !important;-webkit-flex-grow: 0 !important;">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="#"><img id="logoimg" src="{% static 'img/JPPS Logo HQ.png' %}" alt="Logo"></a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0 headerItem" style="display:inline-flex !important">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="{% static 'img/webicon/Blue Outline Version/about.png' %}" alt=""><span class="english">About</span><span class="farsi">درباره ما</span>
+                    </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href={% url 'vision' %}>
+                          <span class="english">Vision</span>
+                          <span class="farsi">اهداف</span>
+                        </a>
+                        <a class="dropdown-item" href={% url 'achievements' %}>
+                          <span class="english">Achievements</span>
+                          <span class="farsi">دستاورد ها</span>
+                        </a>
+                        <a class="dropdown-item" href={% url 'facilities' %}>
+                          <span class="english">Facilities</span>
+                          <span class="farsi">امکانات</span>
+                        </a>
+                        <a class="dropdown-item" href={% url 'staff' %}>
+                          <span class="english">Staff</span>
+                          <span class="farsi">همکاران</span>
+                        </a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'news:All' %}><img src="{% static 'img/webicon/Blue Outline Version/news.png' %}" alt="news icon"><span class="english">News</span><span class="farsi">اخبار</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'galleries:All' %}><img src="{% static 'img/webicon/Blue Outline Version/gallery.png' %}" alt="gallery icon"><span class="english">Gallery</span><span class="farsi">گالری</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'registration' %}><img src="{% static 'img/webicon/Blue Outline Version/Sprogram.png' %}" alt="reg icon"><span class="english">Registration</span><span class="farsi">ثبت نام</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'contactUs' %}><img src="{% static 'img/webicon/Blue Outline Version/iphone.png' %}" alt="contact icon"><span class="english">Contact Us</span><span class="farsi">تماس با ما</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'onlineLearning' %}><img src="{% static 'img/webicon/Blue Outline Version/Onlinelearning.png' %}" alt="onlinelearning icon"><span class="english">Online Learning</span><span class="farsi">آموزش از راه دور</span></a>
+                </li>
+                <li class="nav-item">
+                  <a id="loginbuttonnobodypage" class="nav-link farsialignment" href="http://lms-javid.ir/login/index.php">
+                        <button id="loginbutton"type="button" class="btn btn-outline-white">
+                          <div class="navbar-link">
+                            <img id="myimg" src="{% static 'img/webicon/Blue Outline Version/Lockblue.png' %}" alt="LMS icon">
+                            <span class="english">E-learning Section</span>
+                            <span class="farsi">بخش آموزش</span>
+                          </div>
+                        </button>
+                      </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+  <div class="mainbody container-fluid">
+    <!--News Center Boarder-->
+    <div id="middleBody">
+      <div class=" container centralNewsBoarder">
+        <h1 class="english newsCenterCaptoion">Javid News Center</h1>
+        <h1 class="farsi newsCenterCaptoion">مرکز اخبار جاوید</h1>
+        <!-- Nav pills -->
+        <ul class="nav nav-pills farsialignment" role="tablist" style="justify-content: center">
+          {% for cat in categories %}
+            {% if forloop.counter == 1 %}
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href=#{{ cat.slug }}>
+                  <div class="english">""{{ cat.name }}""</div>
+                  <div class="farsi">{{ cat.farsiName }}</div>
+                </a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href=#{{ cat.slug }}>
+                  <div class="english">{{ cat.name }}</div>
+                  <div class="farsi">{{ cat.farsiName }}</div>
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content" style="padding-top:10px">
+          {% for cat in categories %}
+            {% if forloop.counter == 1 %}
+              <div id={{ cat.slug }} class="container tab-pane active" style="padding-bottom:10px"><br>
+                <h3 class="catHeader english">{{ cat.name }}</h3>
+                <h3 class="catHeader farsi">{{ cat.farsiName }}</h3>
+                {% for art in articles %}
+                  {% for artcat in art.category.all %}
+                    {% if artcat.name == cat.name %}
+                      <a href="{{ art.get_absolute_url }}">
+                        <div class="container-fluid row farsialignment">
+                          <div class="newsThumbnail col-sm-4 col-md-4 col-lg-4 col-xl-2">
+                            <img src={{art.articleImage.url}} alt="">
+                          </div>
+                          <div class="newsContent col-sm-8 col-md-8 col-lg-7 col-xl-8">
+                            <h4 class="english">{{art.title}}</h4>
+                            <h4 class="farsi">{{art.farsiTitle}}</h4>
+                            <p class="english">{{art.shortDescription}}</p>
+                            <p class="farsi">{{art.farsiShortDescription}}</p>
+                          </div>
+                        </div>
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            {% else %}
+              <div id={{ cat.slug }} class="container tab-pane" style="padding-bottom:10px"><br>
+                <h3 class="catHeader english">{{ cat.name }}</h3>
+                <h3 class="catHeader farsi">{{ cat.farsiName }}</h3>
+                {% for art in articles %}
+                  {% for artcat in art.category.all %}
+                    {% if artcat.name == cat.name %}
+                      <a href="{{ art.get_absolute_url }}">
+                        <div class="container-fluid row farsialignment">
+                          <div class="newsThumbnail col-sm-4 col-md-4 col-lg-4 col-xl-2">
+                            <img src={{art.articleImage.url}} alt="">
+                          </div>
+                          <div class="newsContent col-sm-8 col-md-8 col-lg-7 col-xl-8">
+                            <h4 class="english">{{art.title}}</h4>
+                            <h4 class="farsi">{{art.farsiTitle}}</h4>
+                            <p class="english">{{art.shortDescription}}</p>
+                            <p class="farsi">{{art.farsiShortDescription}}</p>
+                          </div>
+                        </div>
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- other Information with indexBar-->
+    <div id="sectiondiv">
+          <nav id="indexBar" class="navbar navbar-expand-sm navbar-dark">
+            <ul class=" navbar-nav farsialignment" style="margin: 0px auto;">
+              {%for sec in sections %}
+              <li class="nav-item">
+                <a id="navlinkcolor" class="nav-link" href=#{{sec.slug}}>
+                    <span class="english">{{ sec.title}}</span>
+                    <span class="farsi">{{ sec.farsi_title}}</span>
+                  </a>    
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+     
+      {% for sec in sections %}
+      <div id="{{sec.slug}}" class="container" style="padding-top:70px;padding-bottom:70px">
+        <h1 class="english">{{sec.title}}</h1>
+        <h1 class="farsi">{{sec.farsi_title}}</h1>
+        <div class="english">{{sec.description|safe}}</div>
+        <div class="farsi">{{sec.farsi_description|safe}}</div>
+      </div>
+      {% endfor %}
+    </div>
+    <!--Linked Website-->
+    <div class="linkedWebsiteBorder container" style="margin:15px auto">
+      <h3 class="english linkedWebsiteHeaderBorder" style="text-align:center">Related Website</h3>
+      <h3 class="farsi linkedWebsiteHeaderBorder" style="text-align:center">سایت های مرتبط</h3>
+      <div class="linkedWebsite">
+        {% for web in websites %}
+          <div><a href={{ web.link }} target="_blank"><img src={{ web.logo.url }} alt={{ web.name }} width="150px"></a></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+  <footer id="footerAttr">
+      <div class="container-fluid row">
+        <!--Footer 1st colomn-->
+        <div class="container col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <h3 class="english">Find us here!</h3>
+          <h3 class="farsi" style="text-align:center">ما را اینجا پیدا کنید!</h3>
+          <div id="map"></div>
+          <div class="english" style="text-align:Left;width:300px;margin-right:auto;margin-left:auto">
+            <b>Address:</b> NJLDLC, Derakhshani St, Ashrafi Esfahani Expy, Tehran, Iran.
+          </div>
+          <div class="farsi" style="text-align:right;width:300px;margin-right:auto;margin-left:auto">
+            <b>آدرس: </b>تهران، بزرگراه اشرفی اصفهانی، کوچه درخشانی، دبستان غیر دولتی جاوید
+          </div>
+          <script>
+            function initMap() {
+              var mapboarder = {
+                lat: 35.744124,
+                lng: 51.336588
+              };
+              var markerr = {
+                lat: 35.744255,
+                lng: 51.334723
+              };
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: markerr
+              });
+              var marker = new google.maps.Marker({
+                position: mapboarder,
+                map: map
+              });
+            }
+          </script>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPodOx_4C8n3TrzngrizGFUAm--Dgav7o&callback=initMap">
+          </script>
+        </div>
+        <!--Footer 2nd colomn-->
+        <div class="container col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          
+          <h3 class="english">Message us here!</h3>
+          <h3 class="farsi" style="text-align:center">اینجا به ما پیام دهید!</h3>
+          <!-- TELEGRAM PART-->
+          <div class="telegramDiv">
+            <div class="tgme_page">
+              <div class="tgme_page_photo">
+                  <a href="tg://resolve?domain=javid_25">
+                      <img class="tgme_page_photo_image" src="{% static 'img\javid_telegram.jpg' %}"></a>
+                </a>
+                
+              </div>
+              <div class="tgme_page_title">Javid School</div>
+              <div class="tgme_page_extra">
+                @javid_25
+              </div>
+              <div class="tgme_page_description">پیش دبستان ودبستان پسرانه غیردولتی جاوید- منطقه 2 تهران - تأسیس 1370</div>
+              <div class="tgme_page_action">
+                <a class="tgme_action_button_new" href="tg://resolve?domain=javid_25">Send Message</a>
+              </div>
+              <!-- WEBOGRAM_BTN -->
+              <div class="tgme_page_additional">
+                If you have
+                <strong>Telegram</strong>, you can contact
+                <br>
+                <strong>Javid</strong> right away.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Footer 3rd colomn-->
+        <div class="container col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          
+          <h3 class="farsi" style="text-align:center">!Change the Language Here</h3>
+          <h3 class="english" style="text-align:center">!اینجا زبان را تغییر دهید</h3>
+          <div class="btn-group" style="margin-top:8px;">
+            
+            <button type="button" class="btn btn-outline-white dropdown-toggle" data-toggle="dropdown">
+              <span class="english">Site Language</span>
+              <span class="farsi">زبان سایت</span>
+            </button>
+            <div class="dropdown-menu">
+              <button class="dropdown-item" onclick="changelang2fa()">
+                  <img style="width:20px"src="{% static 'img/ir.svg' %}" alt="ir-icon"> فارسی</button>
+              <button class="dropdown-item" onclick="changelang2en()">
+                  <img style="width:20px"src="{% static 'img/gb.svg' %}" alt="ir-icon"> English</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--copyright-->
+    <div id="copyright">
+      | Designed & Developed by
+      <a href="https://www.linkedin.com/in/imananoosheh/">Iman Anoosheh</a> &
+      <a href="https://www.linkedin.com/in/ali-yazdanpanah-5a7b10146">Ali Yazdanpanah</a> © 2018 | All rights reserved. |
+    </div>
+
+  <script src="{% static 'js/jquery-migrate-3.0.1.js' %}"></script>
+  <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/landingpage.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/masterfinal.js' %}"></script>
+</body>
+
+</html>

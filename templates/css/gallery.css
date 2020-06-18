@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.image-grid {
+  width: 100%;
+  max-width: 1310px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 5px 0;
+}
+
+.image__cell {
+  float: left;
+  position: relative;
+}
+
+.image--basic {
+  padding: 0 5px;
+}
+
+.image--basic img {
+  margin: auto;
+}
+
+.basic__img {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.image__cell.is-collapsed .image--basic {
+  cursor: pointer;
+}
+
+.image__cell.is-expanded .image--expand {
+  max-height: 600px;
+  margin-bottom: 10px;
+}
+
+.image--expand {
+  position: relative;
+  left: 0px;
+  padding: 0 5px;
+  box-sizing: content-box;
+  overflow: hidden;
+  background: #222;
+  max-height: 0;
+  transition: max-height .3s ease-in-out,margin-bottom .1s .2s;
+  z-index: 100;
+}
+
+.image__cell.is-collapsed .arrow--up {
+  height: 10px;
+  width: 100%;
+}
+
+.image__cell.is-expanded .arrow--up {
+  border-bottom: 8px solid #222;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  height: 0;
+  width: 0;
+  margin: 2px auto 0;
+}
+
+.expand__close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #454545;
+  font-size: 50px;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.expand__close:before {
+  content: '×';
+}
+
+.expand__close:hover {
+  color: #fff;
+}
+
+.image--large {
+  display: block;
+  padding: 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+.centralGalleryBoarder {
+  box-sizing: border-box;
+  border: 2px solid rgba(3, 126, 243, .9);
+  width: auto;
+  padding: 15px 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 530px) {
+
+  .image__cell {
+      width: 50%;
+  }
+
+  .image__cell:nth-of-type(2n+2) .image--expand {
+      margin-left: -100%;
+  }
+
+  .image__cell:nth-of-type(2n+3) {
+      clear:left;
+  }
+
+  .image--expand {
+      width: 200%;
+  }
+
+  .image--large {
+    height: 250px !important;
+  }
+  .gallerydescription {
+    padding-top: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 531px) {
+  .image__cell {
+    width: 42.5%;
+  }
+
+  .image__cell:nth-of-type(5n+2) .image--expand {
+    margin-left: -100%;
+  }
+
+  .image__cell:nth-of-type(5n+3) .image--expand {
+    margin-left: -200%;
+  }
+
+  .image__cell:nth-of-type(5n+4) .image--expand {
+    margin-left: -300%;
+  }
+
+  .image__cell:nth-of-type(5n+5) .image--expand {
+    margin-left: -400%;
+  }
+
+  .image__cell:nth-of-type(5n+6) {
+    clear: left;
+  }
+
+  .image--expand {
+    width: 275%;
+  }
+  .image--large {
+    height: 280px !important;
+  }
+  .gallerydescription {
+    padding-top: 15px;
+  }
+  .gallerydescription h3 {
+    width: 70% !important;
+    margin: auto !important;
+  }
+  .container {
+    padding-left: 0px !important;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .image__cell {
+    width: 35%;
+  }
+
+  .image--expand {
+    width: 350%;
+  }
+  .image--large {
+    height: 380px !important;
+  }
+  .gallerydescription {
+    padding-top: 15px;
+  }
+  
+}
+
+@media only screen and (min-width: 992px) {
+  .image__cell {
+    width: 27.5%;
+  }
+
+  .image--expand {
+    width: 425%;
+  }
+  .image--large {
+    height: 450px !important;
+  }
+  .gallerydescription {
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+    .image__cell {
+      width: 20%;
+  }
+
+  .image--expand {
+    width: 500%;
+  }
+  .image--large {
+    height: 450px !important;
+  }
+  .gallerydescription:lang(fa) {
+    border-left: 2px solid #fff;
+  }
+  
+  .gallerydescription:lang(en) {
+    border-right: 2px solid #fff;
+  }
+}
+
+.catHeader {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid;
+  border-color: rgba(10, 142, 160, .9);
+  margin: 0px 0px 10px 0px;
+}
+
+
+.eventHeader{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid;
+  border-color: rgba(10, 142, 160, .9);
+  margin: 0px 0px 10px 0px;
+}
+
+.eventheadercolor {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.eventheadercolor.active {
+  color: #fff !important;
+}
+
+.gallerydescription {
+margin: auto 5px;
+color: #fff;
+text-align: center;
+word-wrap: break-word;
+}
+
+.gallerydescription .farsi, .english {
+  text-align: center !important;
+}
+
+.gallerydescription h3 {
+  width: 80%;
+  margin: auto;
+}
+
+#gallerybutton {
+  color: #fff;
+  background-color: rgba(251, 104, 72, 1);
+  margin-top: 5px;
+}

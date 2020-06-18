@@ -1,0 +1,6 @@
+label.required::after {
+    content: "*";
+    color: rgb(214, 40, 40);
+    font-weight: bold;
+    font-size-adjust: inherit;
+}
